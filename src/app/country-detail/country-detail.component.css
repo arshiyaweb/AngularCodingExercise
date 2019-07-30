@@ -1,0 +1,9 @@
+textarea:focus, input:focus{
+    outline: none;
+}
+.mat-dialog-conten {
+    background-color: #000;
+    width: 450px;
+    height: 350px;
+    border: none;
+}

@@ -1,0 +1,21 @@
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-entry-field" >
+      <input matInput placeholder="" formControlName="name" readonly='true' style="border:none;border-width:0px;">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-entry-field">
+        <input matInput placeholder="Area" formControlName="area" readonly='true' style="border:none;border-width:0px;">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-entry-field">
+      <input matInput placeholder="Languages" formControlName="languages" readonly='true' style="border:none;border-width:0px;">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-entry-field">
+        <input matInput placeholder="Population" formControlName="population" readonly='true' style="border:none;border-width:0px;">
+      </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button class="mat-raised-button mat-primary"  (click)="close()">Close</button>
+
+  </mat-dialog-actions>
