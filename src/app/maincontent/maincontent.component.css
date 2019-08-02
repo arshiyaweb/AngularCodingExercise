@@ -1,33 +1,21 @@
 
-table, th , td {
-    border: 1px solid grey;
-    border-collapse: collapse;
-    margin-left: 100px;
-    font-size: 16px;
-    text-align: left;
-    text-align-last: inherit;
-    border-collapse: separate;
-    
-    padding: 10px 15px;
-  }
+
   
   table tr:nth-child(odd) {
     background-color: #f1f1f1;
-    padding: 10px 15px;
-    margin-left: 20px;
+    
     
   }
   
   
   table tr:nth-child(even) {
     background-color: #ffffff;
-    padding: 10px 15px;
-    margin-left: 20px;
+   
     
   }
 table {
-    min-width: 80%;
-    border-collapse: collapse;
+    min-width: 100%;
+   
    
    
   }

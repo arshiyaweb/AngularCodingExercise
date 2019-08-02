@@ -1,16 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { HttpClient } from '@angular/common/http';
-import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; 
 //services
 import{CountryService } from './country.service';
 //Meterial Design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }         from '@angular/forms'; 
 import {MatButtonModule} from '@angular/material/button' ;
 import {MatInputModule} from '@angular/material/input';
 // HttpClient module for RESTful API
@@ -32,13 +30,13 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
     BrowserAnimationsModule,    
     MatButtonModule,MatInputModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,FormsModule,
    MatTableModule,MatDialogModule,MatPaginatorModule
    
   ],
   entryComponents:[CountryDetailComponent],
   providers: [CountryService],
-
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,12 @@
 
-  <table mat-table [dataSource]="dataSource" class="table table-bordered" cellspacing="10">
+
+       
+  <table mat-table [dataSource]="dataSource" class="table table-bordered" >
       <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef> 
-              <p  style="text-align: left; margin-left: 10px; ">
+              <h3  style="text-align: left; margin-left: 10px; ">
             Name 
-            </p>
+              </h3>
           </th>
           <td mat-cell *matCellDef="let country"> 
               <p  style="text-align: left; margin-left: 10px; ">
@@ -14,9 +16,9 @@
         </ng-container>
         <ng-container matColumnDef="capital">
             <th mat-header-cell *matHeaderCellDef>
-                <p  style="text-align: left; margin-left: 30px; "> 
+                <h3  style="text-align: left; margin-left: 30px; "> 
               Capital 
-              </p>
+                </h3>
             </th>
             <td mat-cell *matCellDef="let country"> 
                 <p  style="text-align: left; margin-left: 30px; ">
@@ -26,9 +28,9 @@
           </ng-container>
           <ng-container matColumnDef="currencies">
               <th mat-header-cell *matHeaderCellDef >
-                  <p  style="text-align: left; margin-left: 30px; ">
+                  <h3  style="text-align: left; margin-left: 30px; ">
                  Currncy 
-                 </p>
+                  </h3>
                 </th>
               <td mat-cell *matCellDef="let country"> 
                   <p  style="text-align: left; margin-left: 30px; ">
@@ -42,7 +44,8 @@
           
   </table>
   
-<p  style="text-align: left; margin-left: 120px; ">
-    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[1, 5, 10, 25, 100]" ></mat-paginator>
+<h3 style="text-align: left; margin-left: 120px; ">
+    <mat-paginator [length]="100"  [pageSize]="10"  [pageSizeOptions]="[1, 5, 10, 25, 100]" ></mat-paginator>
   <button mdbBtn color="primary" (click)="clear()" outline="true" size="sl" mdbWavesEffect type="button" class="m-3">Clear</button>
-</p>
+</h3>
+      

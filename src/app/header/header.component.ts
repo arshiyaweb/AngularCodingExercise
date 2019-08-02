@@ -15,8 +15,7 @@ export class HeaderComponent implements OnInit {
   filterRegion(param){
   this.dataService.changeMessage({filterType:"region",filterValue:param});
   }
-  filterCountry(event){
-    //console.log(event.target.value);
+  filterCountry(event){   
     this.dataService.changeMessage({filterType:"countryCode",filterValue:event.target.value});
   }
 }

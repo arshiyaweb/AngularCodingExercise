@@ -13,18 +13,7 @@ export class CountryService {
 
   constructor(private http: HttpClient) { }
   // Http Options
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }  
-  private extractData(res: Response) {
-    let body = res;
-    return body || { };
-  }
- // getCountryByCodes(codes): Observable<CountryEntity[]> {
-   // return this.http.get<CountryEntity[]>(this.apiURL + '?codes=' + codes);
-  //}
+ 
   getCountryByCodes(codes): Observable<CountryEntity[]> {
     return this.http.get<CountryEntity[]>(this.apiURL + '/alpha?codes=' + codes)
     .pipe(

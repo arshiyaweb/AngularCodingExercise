@@ -16,9 +16,7 @@ import { DataServiceService } from '../data-service.service';
 export class MaincontentComponent implements OnInit {
   codes=''
   resign=''
-  dataSource 
-  //= new CountryDataSourceByCodes(this.restApi,this.codes);
-  //dataSource = new CountryDataSourceRegion(this.restApi,this.resign);
+  dataSource  
   displayedColumns: string[]=['name','capital','currencies']
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(private restApi: CountryService,private dialog:MatDialog,
@@ -40,7 +38,7 @@ export class MaincontentComponent implements OnInit {
         if(x.filterType==='region')
       {
         this.restApi.getCountryByRegion(x.filterValue).subscribe((data) => {
-          //console.log('Result - ', data);
+        
           this.dataSource = new MatTableDataSource<CountryEntity>(data as CountryEntity[]);
           this.dataSource.paginator = this.paginator;
        
@@ -50,8 +48,7 @@ export class MaincontentComponent implements OnInit {
     });
   }
   selectCountry(country){
-    //console.log(country);
-   
+  
     this.dialog.open(CountryDetailComponent, {
      data: {
        Name:country.name,
@@ -65,7 +62,6 @@ export class MaincontentComponent implements OnInit {
    
   }
   clear(){
-  //console.log(country);
   this.dataSource = new MatTableDataSource<CountryEntity>();
   }
 

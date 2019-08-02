@@ -8,7 +8,6 @@ export interface CountryEntity {
     area: string;
     languages: {
         name: string;
-    }
-  
+    }  
     population: string;
 }
