@@ -1,9 +1,16 @@
-textarea:focus, input:focus{
-    outline: none;
+
+.new-entry-field {
+width:280px !important;
+font-size: 16px;
+text-align: left;
+border-collapse: collapse;
+margin: 5px;
+
 }
-.mat-dialog-conten {
-    background-color: #000;
-    width: 450px;
-    height: 350px;
-    border: none;
-}
+.new-input-field {
+    border:none;   
+     font-size: 16px;
+     background-color: #ffffff;
+    }
+    
+    

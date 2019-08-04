@@ -1,5 +1,4 @@
-
-export interface dataObject{
-filterValue:string;
-filterType:string;
+export interface DataObject {
+     filterValue: string;
+     filterType: string;
 }

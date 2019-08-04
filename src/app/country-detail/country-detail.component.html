@@ -1,21 +1,33 @@
-<mat-dialog-content [formGroup]="form">
-    <mat-form-field class="new-entry-field" >
-      <input matInput placeholder="" formControlName="name" readonly='true' style="border:none;border-width:0px;">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="new-entry-field">
-        <input matInput placeholder="Area" formControlName="area" readonly='true' style="border:none;border-width:0px;">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="new-entry-field">
-      <input matInput placeholder="Languages" formControlName="languages" readonly='true' style="border:none;border-width:0px;">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="new-entry-field">
-        <input matInput placeholder="Population" formControlName="population" readonly='true' style="border:none;border-width:0px;">
-      </mat-form-field>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-    <button class="mat-raised-button mat-primary"  (click)="close()">Close</button>
+<table [formGroup]="form" class="new-entry-field">
+  <tr>    
+    <td colspan="2" class="new-entry-field"> <input matInput placeholder="" formControlName="name" readonly='true'
+        class="new-input-field"></td>
+  </tr>
+  <tr>
+    <td >
+      <h4>Area:</h4>
+    </td>
+    <td class="new-entry-field"><input matInput placeholder="" formControlName="area" readonly='true'
+        class="new-input-field"></td>
+  </tr>
+  <tr>
+    <td >
+      <h4>Language:</h4>
+    </td>
+    <td class="new-entry-field"> <input matInput placeholder="" formControlName="languages" readonly='true'
+        class="new-input-field"></td>
+  </tr>
+  <tr>
+    <td >
+      <h4>Population:</h4>
+    </td>
+    <td class="new-entry-field"> <input matInput placeholder="" formControlName="population" readonly='true'
+        class="new-input-field">
 
-  </mat-dialog-actions>
+  </tr>
+
+</table>
+<mat-dialog-actions>
+  <button class="mat-raised-button mat-primary" (click)="close()">Close</button>
+
+</mat-dialog-actions>

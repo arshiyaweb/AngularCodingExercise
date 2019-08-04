@@ -2,20 +2,21 @@
 
   
   table tr:nth-child(odd) {
-    background-color: #f1f1f1;
-    
+    background-color: #f1f1f1;  
+    border: 1px solid black;   
     
   }
   
   
   table tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #ffffff;  
+    border: 1px solid black;
    
     
   }
 table {
-    min-width: 100%;
-   
+    min-width: 100%;  
+    font-size: 14px;
    
    
   }

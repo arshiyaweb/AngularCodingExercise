@@ -10,8 +10,8 @@ describe('MaincontentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MaincontentComponent ],
-      imports: [ReactiveFormsModule ],
+      declarations: [MaincontentComponent],
+      imports: [ReactiveFormsModule],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
@@ -22,5 +22,5 @@ describe('MaincontentComponent', () => {
     fixture.detectChanges();
   });
 
- 
+
 });

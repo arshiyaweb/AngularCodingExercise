@@ -9,7 +9,7 @@ describe('CountryDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountryDetailComponent  ],
+      declarations: [CountryDetailComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
@@ -20,5 +20,5 @@ describe('CountryDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  
+
 });

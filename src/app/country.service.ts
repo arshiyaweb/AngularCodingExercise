@@ -1,45 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import {map, retry, catchError } from 'rxjs/operators';
+import { map, retry, catchError } from 'rxjs/operators';
 import { CountryEntity } from './models/country-entity';
 @Injectable({
   providedIn: 'root'
 })
 export class CountryService {
-  // Define API
   apiURL = 'https://restcountries.eu/rest/v2';
-
-
   constructor(private http: HttpClient) { }
-  // Http Options
- 
-  getCountryByCodes(codes): Observable<CountryEntity[]> {
+  getCountryByCodes(codes: string): Observable<CountryEntity[]> {
     return this.http.get<CountryEntity[]>(this.apiURL + '/alpha?codes=' + codes)
-    .pipe(
-      retry(1),
-      catchError(this.handleError)
-    )
-  }  
-  // HttpClient API getCountryByCodes() method => Fetch Country
-  getCountryByRegion (region): Observable<CountryEntity[]> {
+      .pipe(retry(1), catchError(this.handleError));
+  }
+  getCountryByRegion(region: string): Observable<CountryEntity[]> {
     return this.http.get<CountryEntity[]>(this.apiURL + '/region/' + region)
-    .pipe(
-      retry(1),
-      catchError(this.handleError)
-    )
-  }  
-  // Error handling 
+      .pipe(retry(1), catchError(this.handleError));
+  }
   handleError(error) {
     let errorMessage = '';
-    if(error.error instanceof ErrorEvent) {
-      // Get client-side error
+    if (error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
     } else {
-      // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
- }
+  }
 }

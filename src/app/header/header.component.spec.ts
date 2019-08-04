@@ -9,7 +9,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent  ],
+      declarations: [HeaderComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
