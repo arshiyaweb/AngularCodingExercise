@@ -5,7 +5,7 @@
     <td><h4>Test Exercise</h4></td>
     <td><h4><button mdbBtn color="primary" outline="true" size="sl" mdbWavesEffect type="button" class="m-3" (click)="filterRegion('europe')">Europe</button></h4></td>
     <td><h4><button mdbBtn color="primary" outline="true" size="sl" mdbWavesEffect type="button" class="m-3" (click)="filterRegion('asia')">Asia</button></h4></td>
-    <td><h4><input matInput placeholder="Search Country" outline="true"  rounded="true" size="sl" class="m-3" (change)="filterCountry($event)" ></h4></td>
+    <td><h4><input matInput placeholder="Search Country" outline="true"  rounded="true" size="sl" class="m-3" (change)="filterCountry($event)" [(ngModel)]="inputText" ></h4></td>
 
   </tr>
  

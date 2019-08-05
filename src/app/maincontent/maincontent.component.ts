@@ -38,7 +38,7 @@ export class MaincontentComponent implements OnInit {
   selectCountry(country: { name: any; area: string; languages: { [x: string]: any; }[]; population: any; }) {
     const key = 'name';
     this.dialog.open(CountryDetailComponent, {
-        data: {
+      data: {
         Name: country.name,
         Area: country.area + ' sq km',
         Languages: country.languages[0][key],
@@ -48,6 +48,8 @@ export class MaincontentComponent implements OnInit {
   }
   clear() {
     this.dataSource = new MatTableDataSource<CountryEntity>();
-  }}
+    this.dataService.changeMessage({ filterType: 'clearInputText', filterValue: '' });
+  }
+}
 
 
